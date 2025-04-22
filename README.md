@@ -69,7 +69,7 @@ Additional technologies and modules:
 
 ## 👨‍💼 Main Interface
 
-![Main Interface](./media/main)
+![Main Interface](./media/main.png)
 
 ---
 
