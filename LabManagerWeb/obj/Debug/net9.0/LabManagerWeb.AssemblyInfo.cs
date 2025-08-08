@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabManagerWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63d703f96a41ca194f29892da217ebdd4c17c91f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+928cf0570b596a8e3a0b1bb03084c78527a6eaec")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabManagerWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabManagerWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
