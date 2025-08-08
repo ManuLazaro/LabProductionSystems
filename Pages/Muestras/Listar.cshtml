@@ -1,0 +1,60 @@
+@page  
+@model LabManagerWeb.Pages.Muestras.ListarModel
+
+@{
+    ViewData["Title"] = "Lista de Muestras";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Aquí mostramos las muestras que han sido registradas en la base de datos -->
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Resultado</th>
+            <th>Fecha</th>
+            <th>Responsable</th>
+            <th>Acciones</th>  <!-- Columna para las acciones, como editar -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var muestra in Model.Muestras) 
+        {
+            <tr>
+                <td>@muestra.Nombre</td>
+                <td>@muestra.Tipo</td>
+                <td>@muestra.Resultado</td>
+                <td>@muestra.Fecha.ToString("yyyy-MM-dd")</td>
+                <td>@muestra.Responsable</td>
+                <td>
+                    <!-- Enlace a la página de edición, pasando el ID de la muestra -->
+                    <a href="/Muestras/Editar?id=@muestra.Id" class="btn btn-primary">Editar</a>
+                    <a href="#" class="btn btn-danger" data-id="@muestra.Id" onclick="mostrarConfirmacion(this)">Eliminar</a>
+                </td>
+            </tr>
+        }
+        <div id="modalConfirmacion" class="modal-confirm" style="display:none;">
+            <div class="modal-content">
+                <p>¿Estás seguro de que deseas eliminar esta muestra?</p>
+                <div class="modal-actions">
+                    <a id="btnConfirmarEliminar" class="btn btn-danger">Eliminar</a>
+                    <button onclick="cerrarModal()" class="btn">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function mostrarConfirmacion(boton) {
+                const id = boton.getAttribute("data-id");
+                const confirmar = document.getElementById("btnConfirmarEliminar");
+                confirmar.href = `/Muestras/Eliminar?id=${id}`;
+                document.getElementById("modalConfirmacion").style.display = "flex";
+            }
+
+            function cerrarModal() {
+                document.getElementById("modalConfirmacion").style.display = "none";
+            }
+        </script>
+    </tbody>
+</table>

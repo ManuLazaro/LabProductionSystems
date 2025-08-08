@@ -1,0 +1,33 @@
+@page 
+@model LabManagerWeb.Pages.Muestras.CrearModel 
+<!-- Aquí indicamos el "modelo" de esta página, que es la clase que maneja la lógica de backend. -->
+@{
+    ViewData["Title"] = "Registrar Muestra"; <!-- El título de la página para usarlo en la vista -->
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Formulario para ingresar los datos de la muestra -->
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <input asp-for="Muestra.Nombre" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Tipo:</label>
+        <input asp-for="Muestra.Tipo" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Resultado:</label>
+        <input asp-for="Muestra.Resultado" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fecha:</label>
+        <input asp-for="Muestra.Fecha" type="date" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Responsable:</label>
+        <input asp-for="Muestra.Responsable" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
