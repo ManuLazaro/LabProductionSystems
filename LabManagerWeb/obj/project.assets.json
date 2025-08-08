@@ -3084,11 +3084,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manul\\.Net\\LabManagerWeb\\LabManagerWeb.csproj",
+      "projectUniqueName": "C:\\Users\\manul\\.Net\\LabManagerWeb\\LabManagerWeb\\LabManagerWeb.csproj",
       "projectName": "LabManagerWeb",
-      "projectPath": "C:\\Users\\manul\\.Net\\LabManagerWeb\\LabManagerWeb.csproj",
+      "projectPath": "C:\\Users\\manul\\.Net\\LabManagerWeb\\LabManagerWeb\\LabManagerWeb.csproj",
       "packagesPath": "C:\\Users\\manul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manul\\.Net\\LabManagerWeb\\obj\\",
+      "outputPath": "C:\\Users\\manul\\.Net\\LabManagerWeb\\LabManagerWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\manul\\AppData\\Roaming\\NuGet\\NuGet.Config"
