@@ -1,0 +1,39 @@
+@page
+@model LabManagerWeb.Pages.Muestras.EditarModel
+
+@{
+    ViewData["Title"] = "Editar Muestra";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Formulario para editar una muestra -->
+<form method="post">
+    <input type="hidden" asp-for="Muestra.Id" />
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <input asp-for="Muestra.Nombre" class="form-control" />
+    </div>
+    <div>
+        <label>Tipo:</label>
+        <input asp-for="Muestra.Tipo" class="form-control" />
+    </div>
+    <div>
+        <label>Resultado:</label>
+        <input asp-for="Muestra.Resultado" class="form-control" />
+    </div>
+    <div>
+        <label>Fecha:</label>
+        <input asp-for="Muestra.Fecha" type="date" class="form-control" />
+    </div>
+    <div>
+        <label>Responsable:</label>
+        <input asp-for="Muestra.Responsable" class="form-control" />
+    </div>
+
+    <!-- Botón de submit para guardar los cambios -->
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+</form>
+
+<!-- Enlace para regresar al listado de muestras -->
+<p><a href="/Muestras/Listar">Volver al listado</a></p>

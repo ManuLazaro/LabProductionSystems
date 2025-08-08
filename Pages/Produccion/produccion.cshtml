@@ -1,0 +1,191 @@
+@page
+@model LabManagerWeb.Pages.Produccion.ProduccionModel
+@{
+    ViewData["Title"] = "Producción";
+}
+<div class="produccion-dashboard">
+     <div class="fila-tres">
+    <!-- Fila 3: OEE -->
+    <section class="panel mini oee-panel">
+        <h3>📊 OEE General</h3>
+        <div class="donut-wrapper">
+            <canvas id="oeeChart" width="100" height="100"></canvas>
+            <div class="oee-center-label">85%</div>
+        </div>
+        <ul class="oee-legend">
+            <li><span class="dot verde"></span>Disponibilidad: 90%</li>
+            <li><span class="dot amarillo"></span>Rendimiento: 80%<a></a></li>
+            <li><span class="dot rojo"></span>Calidad: 85%<a class="btn-link" href="/Produccion/OEE">Ver detalles</a></li>
+        </ul>
+    </section>
+
+    <!-- Estado de líneas (con tabla scrollable) -->
+    <section class="panel mini estado-lineas-panel">
+        <h3>🛠️ Estado de Líneas</h3>
+        <div class="tabla-scroll">
+            <table class="estado-lineas-tabla">
+                <thead>
+                    <tr>
+                        <th>Línea</th>
+                        <th>Estado</th>
+                        <th>Orden</th>
+                        <th>Producto</th>
+                        <th>OEE</th>
+                        <th>Produccion Actual/Objetivo</th>
+                        <th>Tiempo En Estado</th>
+                        <th>Operario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Línea 1</td>
+                        <td>En Producción</td>
+                        <td>OPA-001</td>
+                        <td>Producto 1</td>
+                        <td>80%</td>
+                        <td> 1351 / 3000 </td>
+                        <td>2h 15m</td>
+                        <td>Fulanito</td>
+                    </tr>
+                    <tr>
+                        <td>Línea 2</td>
+                        <td>Parada (Error de motor)</td>
+                        <td>OPA-001</td>
+                        <td>Producto 1</td>
+                        <td>20%</td>
+                        <td> 110 / 3000 </td>
+                        <td>1h 0m</td>
+                        <td>Benganito</td>
+                    </tr>
+                    <tr>
+                        <td>Línea 3</td>
+                        <td>En mantenimiento</td>
+                        <td> -- </td>
+                        <td> -- </td>
+                        <td>0%</td>
+                        <td> 0 / 3000 </td>
+                        <td>3 h 0m</td>
+                        <td> -- </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Alertas reducido -->
+    <section class="panel mini alertas-panel compacto">
+        <h3>⚠️ Alertas</h3>
+        <ul>
+            <li>🛑 Línea 2: Paro por fallo motor</li>
+            <li>⏰ Orden #005 retrasada</li>
+        </ul>
+    </section>
+</div>
+</div>
+
+    <!-- Fila 1: Órdenes de trabajo -->
+    <section class="panel panel-grande">
+        <h3>📋 Órdenes de Producción</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Linea</th>
+                    <th>Lote de Producción</th>
+                    <th>Cantidad</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo estático -->
+                <tr>
+                    <td> OPA-001</td>
+                    <td>Producto A</td>
+                    <td>Linea 1</td>
+                    <td>PF-JINF250-0425A</td>
+                    <td>2000</td>
+                    <td>2025-04-17 10:00</td>
+                    <td>2025-04-17 18:00</td>
+                    <td><button class="btn btn-sm">Finalizado</button></td>
+                </tr>
+                <tr>
+                    <td> OPA-001</td>
+                    <td>Producto A</td>
+                    <td>Linea 1</td>
+                    <td>PF-JINF250-0425A</td>
+                    <td>2000</td>
+                    <td>2025-04-17 10:00</td>
+                    <td>2025-04-17 18:00</td>
+                    <td><button class="btn btn-sm">Finalizado</button></td>
+                </tr>
+                <tr>
+                    <td> OPA-001</td>
+                    <td>Producto A</td>
+                    <td>Linea 1</td>
+                    <td>PF-JINF250-0425A</td>
+                    <td>2000</td>
+                    <td>2025-04-17 10:00</td>
+                    <td>2025-04-17 18:00</td>
+                    <td><button class="btn btn-sm">Finalizado</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Fila 2: Lotes y trazabilidad -->
+    <section class="panel panel-grande">
+        <h3>📦 Lotes y Trazabilidad</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lote</th>
+                    <th>Orden de Producción</th>
+                    <th>Producto</th>
+                    <th>Cantidad real final</th>                   
+                    <th>Resultado de calidad</th>
+                    <th>Fecha liberación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PF-JINF250-0425A</td>
+                    <td>PF-JINF250-0425A</td>
+                    <td>Producto A</td>
+                    <td>1993</td>
+                    <td><span class="estado finalizado">Aprobado</span></td>
+                    <td>2025-04-20</td>
+                    <td><button class="btn btn-sm">Ver</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('oeeChart');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Disponibilidad', 'Rendimiento', 'Calidad'],
+                datasets: [{
+                    label: 'OEE',
+                    data: [40, 30, 25],
+                    backgroundColor: ['#28a745', '#ffc107', '#dc3545'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+}

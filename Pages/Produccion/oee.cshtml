@@ -1,0 +1,121 @@
+@page
+@model LabManagerWeb.Pages.Produccion.OEEModel
+
+<div class="container dashboard-container">
+    <h2>Dashboard de Producción - OEE</h2>
+    <!-- Resumen General -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card small-card">
+                <div class="card-body">
+                    <h5 class="card-title">Disponibilidad</h5>
+                    <p class="card-text">@Model.Disponibilidad %</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card small-card">
+                <div class="card-body">
+                    <h5 class="card-title">Rendimiento</h5>
+                    <p class="card-text">@Model.Rendimiento %</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card small-card">
+                <div class="card-body">
+                    <h5 class="card-title">Calidad</h5>
+                    <p class="card-text">@Model.Calidad %</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OEE Total -->
+    <div class="card mt-3 small-card">
+        <div class="card-body">
+            <h5 class="card-title">OEE Total</h5>
+            <p class="card-text">@Model.OeeTotal %</p>
+        </div>
+    </div>
+
+    <!-- Gráfico de Tendencia OEE -->
+        <div class="card mt-3 small-graphic">
+            <div class="card-body">
+                <h5 class="card-title">Tendencia OEE</h5>
+                <canvas id="oeeTrendChart"></canvas>
+            </div>
+        </div>
+
+
+    <!-- Tabla de Líneas -->
+    <h4 class="mt-4">Líneas de Producción</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Línea/Máquina</th>
+                <th>Disponibilidad</th>
+                <th>Rendimiento</th>
+                <th>Calidad</th>
+                <th>OEE Total</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var linea in Model.Lineas)
+            {
+                <tr>
+                    <td>@linea.Nombre</td>
+                    <td>@linea.Disponibilidad %</td>
+                    <td>@linea.Rendimiento %</td>
+                    <td>@linea.Calidad %</td>
+                    <td>@linea.OEE %</td>
+                    <td>@linea.Alerta</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Causas de Paro -->
+    <h4 class="mt-4">Causas de Paro</h4>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Causas de Paro más comunes</h5>
+            <canvas id="causasParetoChart"></canvas>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Gráfico de Tendencia OEE
+        var ctx = document.getElementById('oeeTrendChart').getContext('2d');
+
+// Ajustar el tamaño para pantallas de alta resolución
+var devicePixelRatio = window.devicePixelRatio || 1;
+var width = ctx.canvas.clientWidth * devicePixelRatio;
+var height = ctx.canvas.clientHeight * devicePixelRatio;
+
+ctx.canvas.width = width;
+ctx.canvas.height = height;
+
+var oeeTrendChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5', 'Día 6', 'Día 7'],
+        datasets: [{
+            label: 'OEE',
+            data: [77, 80, 75, 78, 82, 79, 77],
+            borderColor: 'rgba(0, 123, 255, 1)',
+            fill: false
+        }]
+    },
+    options: {
+        responsive: true, // Hace que el gráfico sea más adaptable
+        maintainAspectRatio: false, // Evita que el gráfico pierda proporciones al redimensionar
+    }
+});
+
+    </script>
+}
