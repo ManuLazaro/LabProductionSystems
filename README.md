@@ -75,7 +75,7 @@ Additional technologies and modules:
 
 ## 📄 Documentation
 
-_(Coming soon or add link here)_
+_(Coming soon )_
 
 ---
 
