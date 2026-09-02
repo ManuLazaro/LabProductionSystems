@@ -1,22 +1,26 @@
-> Project in progress
+![Project Status](https://img.shields.io/badge/Estado-En_desarrollo-yellow?style=for-the-badge)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
 # 🧠 LabProductionSystems
 
-**LabProductionSystems** is a unified platform for pharmaceutical laboratories that integrates Manufacturing Operations (MOM), LIMS, PDM, and R&D.
+**LabProductionSystems** es una plataforma unificada para laboratorios farmacéuticos que integra Operaciones de Fabricación (MOM), LIMS, PDM e I+D.
 
 ---
 
-## 👨‍💻 About the Author
+## 👨‍💻 Sobre el Autor
 
 <table>
 <tr>
 <td align="center" width="140">
-  <img src="https://avatars.githubusercontent.com/u/109770830?v=4" width="100" style="border-radius: 50%;" alt="Profile photo"/>
+  <img src="https://avatars.githubusercontent.com/u/109770830?v=4" width="100" style="border-radius: 50%;" alt="Foto de perfil"/>
 </td>
 <td>
   <strong>Manuel Lázaro Velasco</strong><br>
-  🧑‍💻 Cross-Platform Application Developer<br>
-  📍 Aranda de Duero, Burgos, Spain<br>
+  🧑‍💻 Desarrollador de Aplicaciones Multiplataforma<br>
+  📍 Aranda de Duero, Burgos, España<br>
   📧 <a href="mailto:manulazaro2000@gmail.com">manulazaro2000@gmail.com</a><br>
   🔗 <a href="https://www.linkedin.com/in/manuel-l%C3%A1zaro-velasco-5501a6232/">LinkedIn</a>
 </td>
@@ -25,67 +29,67 @@
 
 ---
 
-## 📌 Description
+## 📌 Descripción
 
-**LabProductionSystems** is an integrated web platform tailored for pharmaceutical and chemical laboratories involved in manufacturing processes.
+**LabProductionSystems** es una plataforma web integrada y diseñada específicamente para laboratorios farmacéuticos y químicos involucrados en procesos de fabricación.
 
-It brings together essential features from:
+Reúne características esenciales de:
 
-- **Manufacturing Operations Management (MOM)**
-- **Laboratory Information Management System (LIMS)**
-- **Product Data Management (PDM)**
-- **Research & Development (R&D)**
+- **Gestión de Operaciones de Fabricación (MOM)**
+- **Sistema de Gestión de Información de Laboratorio (LIMS)**
+- **Gestión de Datos de Producto (PDM)**
+- **Investigación y Desarrollo (I+D)**
 
-into a single, centralized solution.
+en una solución única y centralizada.
 
-### ✅ Key Features:
+### ✅ Características Principales:
 
-- Real-time monitoring of production lines and equipment efficiency (OEE)
-- Quality control and lab test management linked to production batches
-- Version-controlled formulas, recipes, and product specifications
-- Seamless technology transfer from R&D to production
-- Full traceability, compliance, and audit readiness (GMP/GLP)
+- Monitorización en tiempo real de las líneas de producción y eficiencia de equipos (OEE)
+- Control de calidad y gestión de pruebas de laboratorio vinculadas a lotes de producción
+- Fórmulas, recetas y especificaciones de productos con control de versiones
+- Transferencia de tecnología fluida desde I+D hasta la producción
+- Completa trazabilidad, cumplimiento normativo y preparación para auditorías (GMP/GLP)
 
-LabProductionSystems is ideal for organizations seeking to streamline operations, ensure data integrity, and unify lab-to-plant workflows.
+LabProductionSystems es ideal para organizaciones que buscan optimizar sus operaciones, garantizar la integridad de los datos y unificar los flujos de trabajo del laboratorio a la planta.
 
-> Open to future improvements and feature expansions
-
----
-
-## 🧠 Technologies Used
-
-| Framework | Database |
-|----------|----------|
-| .NET     | MySQL    |
-
-Additional technologies and modules:
-- 🔐 Authentication & Authorization
-- 📅 Scheduling & Calendar Integration
-- 💳 Cost & Resource Tracking
-- 📊 Data Visualization (Charts, KPIs)
-- ⚙️ Equipment & Process Management
+> Proyecto abierto a mejoras futuras y ampliación de funcionalidades.
 
 ---
 
-## 👨‍💼 Main Interface
+## 🧠 Tecnologías Utilizadas
 
-![Main Interface](./media/main.png)
+| Framework / Lenguaje | Base de Datos | Interfaz / Frontend |
+|----------------------|---------------|---------------------|
+| .NET / C#            | MySQL         | HTML5 / CSS / JS    |
+
+Módulos y tecnologías adicionales:
+- 🔐 Autenticación y Autorización
+- 📅 Planificación e Integración de Calendarios
+- 💳 Control de Costes y Recursos
+- 📊 Visualización de Datos (Gráficas, KPIs)
+- ⚙️ Gestión de Equipos y Procesos
 
 ---
 
-## 📄 Documentation
+## 👨‍💼 Interfaz Principal
 
-_(Coming soon )_
+![Interfaz Principal](./media/main.png)
 
 ---
 
-## 🚀 How to Run the Project
+## 📄 Documentación
+
+*(Próximamente)*
+
+---
+
+## 🚀 Cómo Ejecutar el Proyecto
 
 ```bash
-# Clone the repository
-git clone https://github.com/ManuLazaro/LabProductionSystems.git
+# Clona el repositorio
+git clone [https://github.com/ManuLazaro/LabProductionSystems.git](https://github.com/ManuLazaro/LabProductionSystems.git)
 
-# Navigate to the project folder
+# Navega a la carpeta del proyecto
 cd LabProductionSystems
 
-# Open and run the solution in Visual Studio or your preferred .NET IDE
+# Abre y ejecuta la solución en Visual Studio o en tu entorno de desarrollo .NET preferido
