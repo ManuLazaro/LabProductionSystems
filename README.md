@@ -10,7 +10,7 @@
 
 ---
 
-## <img src="https://api.iconify.design/lucide:user.svg?color=%23ffffff" height="20" style="vertical-align: -4px;" /> Sobre el Autor
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" height="18" alt="GitHub" /> Sobre el Autor
 
 <table>
 <tr>
