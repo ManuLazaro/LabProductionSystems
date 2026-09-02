@@ -4,13 +4,13 @@
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-# 🧠 LabProductionSystems
+# LabProductionSystems
 
 **LabProductionSystems** es una plataforma unificada para laboratorios farmacéuticos que integra Operaciones de Fabricación (MOM), LIMS, PDM e I+D.
 
 ---
 
-## 👨‍💻 Sobre el Autor
+## <img src="https://api.iconify.design/lucide:user.svg?color=%23ffffff" height="20" style="vertical-align: -4px;" /> Sobre el Autor
 
 <table>
 <tr>
@@ -29,7 +29,7 @@
 
 ---
 
-## 📌 Descripción
+## <img src="https://api.iconify.design/lucide:file-text.svg?color=%230284c7" height="20" style="vertical-align: -4px;" /> Descripción
 
 **LabProductionSystems** es una plataforma web integrada y diseñada específicamente para laboratorios farmacéuticos y químicos involucrados en procesos de fabricación.
 
@@ -42,7 +42,7 @@ Reúne características esenciales de:
 
 en una solución única y centralizada.
 
-### ✅ Características Principales:
+### Características Principales:
 
 - Monitorización en tiempo real de las líneas de producción y eficiencia de equipos (OEE)
 - Control de calidad y gestión de pruebas de laboratorio vinculadas a lotes de producción
@@ -56,34 +56,34 @@ LabProductionSystems es ideal para organizaciones que buscan optimizar sus opera
 
 ---
 
-## 🧠 Tecnologías Utilizadas
+## <img src="https://api.iconify.design/lucide:cpu.svg?color=%2310b981" height="20" style="vertical-align: -4px;" /> Tecnologías Utilizadas
 
 | Framework / Lenguaje | Base de Datos | Interfaz / Frontend |
 |----------------------|---------------|---------------------|
 | .NET / C#            | MySQL         | HTML5 / CSS / JS    |
 
 Módulos y tecnologías adicionales:
-- 🔐 Autenticación y Autorización
-- 📅 Planificación e Integración de Calendarios
-- 💳 Control de Costes y Recursos
-- 📊 Visualización de Datos (Gráficas, KPIs)
-- ⚙️ Gestión de Equipos y Procesos
+- Autenticación y Autorización
+- Planificación e Integración de Calendarios
+- Control de Costes y Recursos
+- Visualización de Datos (Gráficas, KPIs)
+- Gestión de Equipos y Procesos
 
 ---
 
-## 👨‍💼 Interfaz Principal
+## <img src="https://api.iconify.design/lucide:layout.svg?color=%23f59e0b" height="20" style="vertical-align: -4px;" /> Interfaz Principal
 
 ![Interfaz Principal](./media/main.png)
 
 ---
 
-## 📄 Documentación
+## <img src="https://api.iconify.design/lucide:book-open.svg?color=%23ec4899" height="20" style="vertical-align: -4px;" /> Documentación
 
 *(Próximamente)*
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto
+## <img src="https://api.iconify.design/lucide:terminal.svg?color=%236366f1" height="20" style="vertical-align: -4px;" /> Cómo Ejecutar el Proyecto
 
 ```bash
 # Clona el repositorio
